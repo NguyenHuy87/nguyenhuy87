@@ -1,0 +1,7 @@
+RewriteEngine On
+# RewriteBase /
+# RewriteRule ^san-pham$ index.php?module=products [L,QSA]
+# RewriteRule ^san-pham/(\d+)-(.+).html$ index.php?module=products&action=detail&id=$1&slug=$2 [L,QSA]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^(.+)$ index.php/$1 [L,QSA]
